@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.gustavoforero.moviestest.data.model.entity.Movie" />
+    </data>
+
+
+    <ScrollView
+        android:id="@+id/scrollViewDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fragment_youtube_player"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/player"
+                    android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_poster"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="16dp"
+                    android:transitionName="@string/shared_image"
+                    app:url="@{movie.posterPath}" />
+
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/lab_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/img_poster"
+                    android:singleLine="true"
+                    android:text="@{movie.title}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSizeExtraLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lab_title"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/img_poster"
+                    android:singleLine="true"
+                    android:drawableEnd="@drawable/ic_stars"
+                    android:text="@{String.valueOf(movie.voteAverage)}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSizeLarge" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/lab_overview"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textSizeExtraLarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@{movie.overview}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textSizeLarge" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

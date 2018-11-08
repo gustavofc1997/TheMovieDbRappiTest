@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movies</string>
+
+    <string name="lab_overview">Overview</string>
+    <string name="shared_image">sharedimage</string>
+    <string name="hint_autcomplete">Try to search something</string>
+
+</resources>
