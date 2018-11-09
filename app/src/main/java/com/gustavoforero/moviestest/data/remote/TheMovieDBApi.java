@@ -21,18 +21,18 @@ public interface TheMovieDBApi {
 
     @Headers({"Content-Type: application/json;charset=utf-8"})
     @GET("3/discover/movie?sort_by=popularity.desc&api_key=" + API_KEY)
-    Call<MoviesResponse> getPopularMovies(@Query("page") int page);
+    Call<MoviesResponse> getPopularMovies();
 
     @GET("3/movie/{Id}/videos?api_key="+API_KEY)
     Call<TrailersResponse>getMovieVideoId(@Path("Id") String movieId);
 
     @Headers({"Content-Type: application/json;charset=utf-8"})
     @GET("3/discover/movie?sort_by=vote_count.desc&api_key=" + API_KEY)
-    Call<MoviesResponse> getTopMovies(@Query("page") int page);
+    Call<MoviesResponse> getTopMovies();
 
 
     @Headers({"Content-Type: application/json;charset=utf-8"})
     @GET("3/movie/upcoming?api_key=" + API_KEY)
-    Call<MoviesResponse> getUpcomingMovies(@Query("page") int page);
+    Call<MoviesResponse> getUpcomingMovies();
 
 }

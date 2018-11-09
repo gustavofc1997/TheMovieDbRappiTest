@@ -56,7 +56,7 @@ public class MovieRepository {
             @NonNull
             @Override
             protected Call<MoviesResponse> createCall() {
-                return mApiService.getPopularMovies(1);
+                return mApiService.getPopularMovies();
             }
         }.getAsLiveData();
     }
@@ -81,7 +81,7 @@ public class MovieRepository {
             @NonNull
             @Override
             protected Call<MoviesResponse> createCall() {
-                return mApiService.getTopMovies(1);
+                return mApiService.getTopMovies();
             }
         }.getAsLiveData();
     }
@@ -106,7 +106,7 @@ public class MovieRepository {
             @NonNull
             @Override
             protected Call<MoviesResponse> createCall() {
-                return mApiService.getUpcomingMovies(1);
+                return mApiService.getUpcomingMovies();
             }
         }.getAsLiveData();
     }
