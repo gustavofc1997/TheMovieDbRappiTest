@@ -23,10 +23,10 @@
 
 ### 2. Qué características tiene, según su opinión, un “buen” código o código limpio?
 
-###### Al escribir código debemos tener en cuenta que no es nuestro y que no somos los unicos en usarlo por ende debe ser tan claro que cualquiera que llegue a leerlo debe estar en la capacidad de entenderlo
+- Al escribir código debemos tener en cuenta que no es nuestro y que no somos los unicos en usarlo por ende debe ser tan claro que cualquiera que llegue a leerlo debe estar en la capacidad de entenderlo
 
-###### Nuestro código debe ser limpio y enfocado, para esto debemos tener en cuenta algunos principios como el SRP para mantener las clases con una sola responsabilidad de forma que no se afecte lo demas y otro principio como el DRY para evitar generar proyectos extensos y con evitar lidiar con la complejidad
+- Nuestro código debe ser limpio y enfocado, para esto debemos tener en cuenta algunos principios como el SRP para mantener las clases con una sola responsabilidad de forma que no se afecte lo demas y otro principio como el DRY para evitar generar proyectos extensos y con evitar lidiar con la complejidad
 
-###### Código minimo con esto hago referencia a que se deben mantener los metodos y clases cortas de forma que cumplan con su objetivo inicial sin convertirse en algo complejo de forma que facilite la lectura 
+- Código minimo con esto hago referencia a que se deben mantener los metodos y clases cortas de forma que cumplan con su objetivo inicial sin convertirse en algo complejo de forma que facilite la lectura 
 
-###### Un buen código usa convenciones significativas 
+- Un buen código usa convenciones significativas 
